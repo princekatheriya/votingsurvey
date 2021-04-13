@@ -3,15 +3,15 @@ import {
   database,
   auth,
   googleAuthProvider,
-  facebookProvider,
+  // facebookProvider,
   storage,
 } from "./firebase";
 import registerMessaging from "./request-messaging-permission";
 
-import FileInput from "react-file-input";
+// import FileInput from "react-file-input";
 
-import reactLogo from "./react-logo.svg";
-import firebaseLogo from "./firebase-logo.svg";
+// import reactLogo from "./react-logo.svg";
+// import firebaseLogo from "./firebase-logo.svg";
 import "./App.css";
 class App extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class App extends Component {
 
     this.state = {
       guides: null,
-      newData: "",
+      // newData: "",
       vil: "",
       radio: "",
       currentUser: {},
@@ -76,10 +76,10 @@ class App extends Component {
   }
 
   // Form Events
-  handleChange(event) {
-    const newData = event.target.value;
-    this.setState({ newData });
-  }
+  // handleChange(event) {
+  //   const newData = event.target.value;
+  //   this.setState({ newData });
+  // }
 
   handleChangeOption(event) {
     const vil = event.target.value;
@@ -93,7 +93,9 @@ class App extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { newData, currentUser, vil, radio } = this.state;
+    const {
+      //  newData, 
+      currentUser, vil, radio } = this.state;
     console.log("data:- ", this.state);
     this.guidesRef.push({
       uid: currentUser.uid,
@@ -150,7 +152,7 @@ class App extends Component {
     if (userImages) {
       const imageIds = Object.keys(userImages);
       return imageIds.map((id) => (
-        <img key={id} className="App-image" src={userImages[id]} />
+        <img key={id} className="App-image" alt="user" src={userImages[id]} />
       ));
     }
   }
@@ -234,7 +236,7 @@ class App extends Component {
                     }}
                   >
                     <span style={{ margin: 20 }}>1. </span>{" "}
-                    <img src={anaj} width="100" height="50" />
+                    <img src={anaj} alt="anaj" width="100" height="50" />
                   </div>
                   <div style={{ display: "inline" }}>
                     <input type="radio" value="ANAJ" name="gender" required />{" "}
@@ -250,7 +252,7 @@ class App extends Component {
                     }}
                   >
                     <span style={{ margin: 20 }}>2.</span>
-                    <img src={imli} width="100" height="50" />
+                    <img src={imli} alt="imli" width="100" height="50" />
                   </div>
                   <div style={{ display: "inline" }}>
                     <input type="radio" value="IMLI" name="gender" required />{" "}
@@ -266,10 +268,10 @@ class App extends Component {
                     }}
                   >
                     <span style={{ margin: 20 }}>3. </span>{" "}
-                    <img src={kanni} width="100" height="50" />
+                    <img src={kanni} alt="kanni" width="100" height="50" />
                   </div>
                   <div style={{ display: "inline" }}>
-                    <input type="radio" value="KANNI" name="gender" required />{" "}
+                    <input type="radio" value="KANNI"  name="gender" required />{" "}
                   </div>
                 </div>
 
@@ -282,10 +284,10 @@ class App extends Component {
                     }}
                   >
                     <span style={{ margin: 20 }}>4. </span>
-                    <img src={car} width="100" height="50" />
+                    <img src={car} alt="car" width="100" height="50" />
                   </div>
                   <div style={{ display: "inline" }}>
-                    <input type="radio" value="CAR  " name="gender" required />{" "}
+                    <input type="radio" value="CAR" name="gender" required />{" "}
                   </div>
                 </div>
 
@@ -298,7 +300,7 @@ class App extends Component {
                     }}
                   >
                     <span style={{ margin: 20 }}>5. </span>{" "}
-                    <img src={kitab} width="100" height="50" />
+                    <img src={kitab} alt="kitab" width="100" height="50" />
                   </div>
                   <div style={{ display: "inline" }}>
                     <input type="radio" value="KITAB" name="gender" required />{" "}
@@ -308,7 +310,7 @@ class App extends Component {
                 <div style={{}}>
                   <div style={{ display: "inline-flex" }}>
                     <span style={{ margin: 20 }}>6. </span>{" "}
-                    <img src={camera} width="100" height="50" />
+                    <img src={camera} alt="camera" width="100" height="50" />
                   </div>
                   <div style={{ display: "inline" }}>
                     <input type="radio" value="CAMERA" name="gender" required />{" "}
@@ -324,7 +326,7 @@ class App extends Component {
                     }}
                   >
                     <span style={{ margin: 20 }}>7. </span>
-                    <img src={carrom} width="100" height="50" />
+                    <img src={carrom} alt="carrom" width="100" height="50" />
                   </div>
                   <div style={{ display: "inline" }}>
                     <input type="radio" value="CARROM" name="gender" required />{" "}
@@ -340,7 +342,7 @@ class App extends Component {
                     }}
                   >
                     <span style={{ margin: 20 }}>8. </span>{" "}
-                    <img style={{}} src={coat} width="100" height="50" />
+                    <img style={{}} src={coat} alt="coat" width="100" height="50" />
                   </div>
                   <div style={{ display: "inline" }}>
                     <input type="radio" value="COAT" name="gender" required />
