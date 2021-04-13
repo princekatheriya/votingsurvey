@@ -128,4 +128,7 @@ a {
   width: 193px;
   vertical-align: top;
   border-radius: 4px;
-} 
+}
+input[type=radio] {
+  margin-left: 50px;
+}
