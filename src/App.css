@@ -66,6 +66,13 @@ a {
   background: #f1f1f1
 }
 
+.AppBody-fb-db1 {
+  border-radius: 4px;
+  padding: 15px;
+  background: #f1f1f1;
+  margin-bottom: 20px;
+}
+
 .AppBody .file {
   padding: .5rem .75rem;
   font-size: 1rem;
@@ -104,6 +111,23 @@ a {
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+
+.App-form .button1 {
+  margin-left: 10px;
+  background-color: #dddddd;
+  border-color: #dddddd;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
 
 .AppBody .file {
   padding: .5rem .75rem;
